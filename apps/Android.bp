@@ -1,0 +1,41 @@
+android_app_import {
+        name: "AsusDeskClock",
+        apk: "AsusDeskClock/AsusDeskClock.apk",
+	optional_uses_libs: ["org.apache.http.legacy"],
+        presigned: true,
+        product_specific: true,
+        overrides: ["AlarmClock","DeskClock"],
+        required: ["com.asus.deskclock_whitelist"],
+}
+prebuilt_etc {
+        name: "com.asus.deskclock_whitelist",
+        product_specific: true,
+        sub_dir: "sysconfig",
+        src: "AsusDeskClock/com.asus.deskclock_whitelist.xml",
+        filename_from_src: true,
+}
+
+android_app_import {
+        name: "PrcCalculator",
+        apk: "PrcCalculator/PrcCalculator.apk",
+        presigned: true,
+        product_specific: true,
+        overrides: ["Calculator"],
+}
+
+android_app_import {
+        name: "PrcGallery2",
+        apk: "PrcGallery2/PrcGallery2.apk",
+        presigned: true,
+        privileged: true,
+        product_specific: true,
+        overrides: ["Gallery2"],
+}
+
+android_app_import {
+	name: "Via",
+	apk: "Via/Via.apk",
+	presigned: true,
+	product_specific: true,
+	overrides: ["Browser2"],
+}
