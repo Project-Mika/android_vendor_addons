@@ -2,7 +2,10 @@
 PRODUCT_PACKAGES += \
     AsusDeskClock \
     PrcCalculator \
+    PrcContacts \
+    PrcDialer \
     PrcGallery2 \
+    PrcMessaging \
     NTVoiceRecorder \
     Via
 

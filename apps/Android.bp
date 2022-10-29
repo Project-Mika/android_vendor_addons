@@ -16,11 +16,66 @@ prebuilt_etc {
 }
 
 android_app_import {
+        name: "PrcDialer",
+        product_specific: true,
+        apk: "PrcDialer/PrcDialer.apk",
+        presigned: true,
+        privileged: true,
+        required: ["com.android.dialer.bgintents","privapp-permissions-com.android.dialer","hiddenapi-whitelist-com.android.prc.dialer"],
+        overrides: ["Dialer"],
+}
+prebuilt_etc {
+        name: "com.android.dialer.bgintents",
+        product_specific: true,
+        sub_dir: "motorola/bgintents",
+        src: "PrcDialer/com.android.dialer.bgintents.xml",
+        filename_from_src: true,
+}
+prebuilt_etc {
+        name: "privapp-permissions-com.android.dialer",
+        product_specific: true,
+        sub_dir: "permissions",
+        src: "PrcDialer/privapp-permissions-com.android.dialer.xml",
+        filename_from_src: true,
+}
+prebuilt_etc {
+        name: "hiddenapi-whitelist-com.android.prc.dialer",
+        product_specific: true,
+        sub_dir: "sysconfig",
+        src: "PrcDialer/hiddenapi-whitelist-com.android.prc.dialer.xml",
+        filename_from_src: true,
+}
+
+android_app_import {
         name: "PrcCalculator",
         apk: "PrcCalculator/PrcCalculator.apk",
         presigned: true,
         product_specific: true,
         overrides: ["Calculator"],
+}
+
+android_app_import {
+        name: "PrcContacts",
+        product_specific: true,
+        apk: "PrcContacts/PrcContacts.apk",
+        presigned: true,
+        privileged: true,
+        required: ["com.android.contacts.autorun","privapp-permissions-com.android.contacts"],
+        overrides: ["Contacts"],
+}
+prebuilt_etc {
+        name: "com.android.contacts.autorun",
+        product_specific: true,
+        sub_dir: "motorola/bgintents",
+        src: "PrcContacts/com.android.contacts.autorun.xml",
+        filename_from_src: true,
+}
+prebuilt_etc {
+        name: "privapp-permissions-com.android.contacts",
+        product_specific: true,
+        sub_dir: "permissions",
+        src: "PrcContacts/privapp-permissions-com.android.contacts.xml",
+        filename_from_src: true,
 }
 
 android_app_import {
@@ -30,6 +85,37 @@ android_app_import {
         privileged: true,
         product_specific: true,
         overrides: ["Gallery2"],
+}
+
+android_app_import {
+        name: "PrcMessaging",
+        product_specific: true,
+        apk: "PrcMessaging/PrcMessaging.apk",
+        presigned: true,
+        privileged: true,
+        required: ["com.android.messaging.bgintents","privapp-permissions-com.android.messaging","hiddenapi-whitelist-com.android.prc.messaging"],
+        overrides: ["messaging"],
+}
+prebuilt_etc {
+        name: "com.android.messaging.bgintents",
+        product_specific: true,
+        sub_dir: "motorola/bgintents",
+        src: "PrcMessaging/com.android.messaging.bgintents.xml",
+        filename_from_src: true,
+}
+prebuilt_etc {
+        name: "privapp-permissions-com.android.messaging",
+        product_specific: true,
+        sub_dir: "permissions",
+        src: "PrcMessaging/privapp-permissions-com.android.messaging.xml",
+        filename_from_src: true,
+}
+prebuilt_etc {
+        name: "hiddenapi-whitelist-com.android.prc.messaging",
+        product_specific: true,
+        sub_dir: "sysconfig",
+        src: "PrcMessaging/hiddenapi-whitelist-com.android.prc.messaging.xml",
+        filename_from_src: true,
 }
 
 android_app_import {
