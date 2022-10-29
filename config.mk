@@ -1,4 +1,5 @@
 # Apps
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 PRODUCT_PACKAGES += \
     AsusDeskClock \
     PrcCalculator \

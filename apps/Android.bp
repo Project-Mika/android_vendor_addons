@@ -19,6 +19,7 @@ android_app_import {
         name: "PrcDialer",
         product_specific: true,
         apk: "PrcDialer/PrcDialer.apk",
+	optional_uses_libs: ["ims-ext-common","org.apache.http.legacy"],
         presigned: true,
         privileged: true,
         required: ["com.android.dialer.bgintents","privapp-permissions-com.android.dialer","hiddenapi-whitelist-com.android.prc.dialer"],
@@ -91,6 +92,7 @@ android_app_import {
         name: "PrcMessaging",
         product_specific: true,
         apk: "PrcMessaging/PrcMessaging.apk",
+	optional_uses_libs: ["org.apache.http.legacy"],
         presigned: true,
         privileged: true,
         required: ["com.android.messaging.bgintents","privapp-permissions-com.android.messaging","hiddenapi-whitelist-com.android.prc.messaging"],
@@ -121,6 +123,7 @@ prebuilt_etc {
 android_app_import {
         name: "NTVoiceRecorder",
         apk: "NTVoiceRecorder/NTVoiceRecorder.apk",
+        optional_uses_libs: ["androidx.window.extensions","androidx.window.sidecar"],
         presigned: true,
         privileged: true,
         product_specific: true,
